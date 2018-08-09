@@ -1,21 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './BreadForm';
+import BreadForm from "./BreadForm";
+import Ingredients from "./Ingredients";
+import Schedule from "./Schedule";
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            formData: {
+                breadCount: 1,
+
+            },
+        }
+    }
+
+    onFormUpdated(data) {
+        this.setState({
+            formData: data,
+        });
+    }
+
+
+
+    render() {
+        return (
+            <div className="app">
+                <h1>
+                    Bake the perfect sourdough bread
+                </h1>
+                <h2>
+                    Lets begin with the basics
+                </h2>
+                <BreadForm onFormUpdated={this.onFormUpdated.bind(this)}/>
+                <Ingredients formData={this.state.formData}  />
+                <Schedule/>
+            </div>
+        );
+    }
 }
 
 export default App;
