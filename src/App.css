@@ -1,6 +1,10 @@
+p {
+  margin: 0; }
+
 .app {
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 12px; }
   .app h1 {
     text-align: center; }
   .app > h2 {
@@ -16,34 +20,56 @@
     max-width: 700px; }
     .app .schedule ul::before {
       position: absolute;
-      transform: translateX(-50%);
-      left: 50%;
       content: '';
-      height: 100%;
       width: 1px;
-      background-color: black; }
+      height: 100%;
+      background-color: black;
+      left: 2px; }
+      @media screen and (min-width: 720px) {
+        .app .schedule ul::before {
+          transform: translateX(-50%);
+          left: 50%; } }
     .app .schedule ul li {
       position: relative;
       list-style-type: none;
-      height: 100px;
+      overflow: auto;
       margin-bottom: 24px; }
       .app .schedule ul li::before {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 50%;
         width: 7px;
         height: 7px;
         content: '';
         border-radius: 100%;
-        background-color: black; }
-      .app .schedule ul li .wrapper {
+        background-color: black;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute; }
+        @media screen and (min-width: 720px) {
+          .app .schedule ul li::before {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%; } }
+      .app .schedule ul li .time {
+        font-size: 0.9rem;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(12px, -50%); }
+        @media screen and (min-width: 720px) {
+          .app .schedule ul li .time {
+            transform: translate(-50%, -50%);
+            left: calc(50% + 30px); } }
+      .app .schedule ul li .wrapper {
         border-radius: 8px;
         padding: 12px;
         box-shadow: 0 2px 4px 0 rgba(57, 55, 56, 0.15);
-        width: 250px; }
-      .app .schedule ul li:nth-child(even) .wrapper {
-        right: 0; }
+        width: calc(100% - (24px + 60px));
+        background-color: aliceblue;
+        float: right; }
+        @media screen and (min-width: 720px) {
+          .app .schedule ul li .wrapper {
+            margin-left: 0;
+            width: 250px;
+            float: inherit; } }
+      @media screen and (min-width: 720px) {
+        .app .schedule ul li:nth-child(even) .wrapper {
+          float: right; } }

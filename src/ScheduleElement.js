@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 
 class ScheduleElement extends Component {
     render() {
+        const optionalClass = this.props.optional ? 'optional': '';
+        console.log(this.props);
         return (
-            <li>
+            <li className={optionalClass}>
+                <p className="time">
+                    {this.props.time}
+                </p>
                 <div className="wrapper">
-                    <p className="time"></p>
                     <h3 className="title">
                         {this.props.title}
                     </h3>
