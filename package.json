@@ -26,5 +26,5 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
-    "homepage": "https://benna100.github.io/easy-sourdough"
+    "homepage": "https://benna100.github.io"
 }
