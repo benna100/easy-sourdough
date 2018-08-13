@@ -1,22 +1,21 @@
 import React, {Component} from 'react';
+import Linkify from 'react-linkify';
 
 class ScheduleElement extends Component {
     render() {
         const optionalClass = this.props.optional ? 'optional': '';
-        console.log(this.props);
+        const optionalTag = this.props.optional ? <p className="optional">Optional</p> :  '';
         return (
             <li className={optionalClass}>
-                <p className="time">
-                    {this.props.time}
-                </p>
-                <div className="wrapper">
-                    <h3 className="title">
-                        {this.props.title}
-                    </h3>
+                <h3 className="title">
+                    {this.props.time} {this.props.title}
+                </h3>
+                {optionalTag}
+                <Linkify properties={{target: '_blank'}}>
                     <p className="description">
                         {this.props.description}
                     </p>
-                </div>
+                </Linkify>
             </li>
         );
     }

@@ -31,7 +31,6 @@ class Ingredients extends Component {
 
         return (
             <div className={`ingredients ${this.state.visibility}`}>
-                You will need:
                 <ul>
                     <li><strong>{ingredients.breadFlour}g</strong> bread flour</li>
                     <li><strong>{ingredients.allPurposeFlour}g</strong> all purpose flour</li>

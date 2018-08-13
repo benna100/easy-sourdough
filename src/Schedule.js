@@ -5,20 +5,20 @@ class Schedule extends Component{
     render() {
         const scheduleElements = [
             {
-                title: 'Feed starter',
-                description: 'Add in the water into the starter',
+                title: 'Feed your starter',
+                description: 'Add in water and flour to the starter. To see how to make a sourdough starter go to: https://www.youtube.com/watch?v=I1Ssdzk6uhI',
                 optional: false,
-                time: '9:00'
+                time: '8:00'
             }, {
                 title: 'Mix water and flour',
                 description: 'Add in the flour and water. This process is called autolyse. It develops the gluten in the bread. ',
                 optional: false,
-                time: '12:00'
+                time: '17:00'
             }, {
                 title: 'Add starter',
-                description: 'Add in the starter and the salt and mix it all together. The bulk fermentation stage has officially started.',
+                description: 'When the starter has close to doubled in size and can pass the float test it is ready for use. Now mix the starter, the salt and the dough. The bulk fermentation stage has officially started.',
                 optional: false,
-                time: '17:00'
+                time: '17:30'
             }, {
                 title: 'Stretch the dough',
                 description: 'Fold over every part of the dough',
@@ -41,7 +41,7 @@ class Schedule extends Component{
                 time: '18:30'
             }, {
                 title: 'Round the dough',
-                description: 'The dough now needs to be shaped into a ball, very gently. ',
+                description: 'At this point the dough should be between 1.5 - 2 times the original size. The dough now needs to be shaped into a ball, very gently!',
                 optional: true,
                 time: '22:00'
             }, {
@@ -71,7 +71,7 @@ class Schedule extends Component{
                 time: '09:05'
             }, {
                 title: 'Eat your delicious bread!',
-                description: 'Thats it, you can now eat the poor bastard!',
+                description: 'Thats it, you can now enjoy the fruits of your labor :D',
                 optional: false,
                 time: '10:05'
             }
@@ -79,7 +79,7 @@ class Schedule extends Component{
 
         return (
             <div className="schedule">
-                <h2>This is your schedule:</h2>
+                <h2>Schedule</h2>
                 <ul>
                     {
                         scheduleElements.map((scheduleElement, i) => {

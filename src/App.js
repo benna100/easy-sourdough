@@ -4,6 +4,7 @@ import './BreadForm';
 import BreadForm from "./BreadForm";
 import Ingredients from "./Ingredients";
 import Schedule from "./Schedule";
+import sourdough from './sourdough.jpg';
 
 
 class App extends Component {
@@ -11,33 +12,34 @@ class App extends Component {
         super(props);
 
         this.state = {
-            formData: {
+            inputData: {
                 breadCount: 1,
-
             },
         }
     }
 
-    onFormUpdated(data) {
+    onFormUpdated = (data) => {
         this.setState({
-            formData: data,
+            inputData: data,
         });
     }
-
-
 
     render() {
         return (
             <div className="app">
-                <h1>
-                    Bake the perfect sourdough bread
-                </h1>
-                <h2>
-                    Lets begin with the basics
-                </h2>
-                <BreadForm onFormUpdated={this.onFormUpdated.bind(this)}/>
-                <Ingredients formData={this.state.formData}  />
-                <Schedule/>
+                <header>
+                    <img src={sourdough} alt="Sourdough bread"/>
+                </header>
+                <main>
+                    <h1>
+                        Bake the perfect sourdough bread
+                    </h1>
+                    <div className="wrapper">
+                        <BreadForm defaultState="" onFormUpdated={this.onFormUpdated} initialState={this.state.inputData}/>
+                        <Ingredients formData={this.state.inputData}  />
+                    </div>
+                    <Schedule/>
+                </main>
             </div>
         );
     }
