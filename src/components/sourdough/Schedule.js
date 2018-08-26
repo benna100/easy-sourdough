@@ -1,5 +1,57 @@
 import React, {Component} from 'react';
 import ScheduleElement from './ScheduleElement';
+import { css } from 'emotion';
+
+const scheduleStyle = css`
+    padding-left: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #ccc;
+
+    @media only screen and (min-width: 600px) {
+        flex: 0 0 70%;
+        padding-left: 24px;
+        overflow-y: scroll;
+        max-height: 500px;
+    }
+
+    ul {
+        margin: 0 auto;
+        position: relative;
+        list-style: none;
+        padding-left: 0;
+        max-width: 700px;
+
+        li {
+            margin-bottom: 36px;
+            position: relative;
+
+            h3 {
+                margin-bottom: 8px;
+
+                display: inline-block;
+            }
+
+            .optional {
+                border-radius: 8px;
+                background-color: #4d4d4d;
+                color: white;
+                padding: 4px 8px;
+                display: inline-block;
+                margin-left: 24px;
+            }
+
+            .description {
+                line-height: 1.5rem;
+            }
+        }
+    }
+`;
+
+const headerH2Style = css`
+    color: #a2a2a2;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+`;
 
 class Schedule extends Component{
     render() {
@@ -78,8 +130,8 @@ class Schedule extends Component{
         ];
 
         return (
-            <div className="schedule">
-                <h2>Schedule</h2>
+            <div className={scheduleStyle}>
+                <h2 className={headerH2Style}>Schedule</h2>
                 <ul>
                     {
                         scheduleElements.map((scheduleElement, i) => {

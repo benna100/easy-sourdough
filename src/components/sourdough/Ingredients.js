@@ -1,4 +1,16 @@
 import React, { Component } from 'react';
+import { css } from 'emotion';
+
+
+const ulStyle = css`
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 12px;
+    }
+`;
+
 
 class Ingredients extends Component {
     constructor(props) {
@@ -13,9 +25,9 @@ class Ingredients extends Component {
         const breadFlourUnit = 140;
         const allPurposeFlourUnit = 250;
         const wholeWheatUnit = 90;
-        const waterUnit = 320;
+        const waterUnit = 340;
         const starterUnit = 90;
-        const saltUnit = 9;
+        const saltUnit = 11;
 
         return {
             breadFlour: breadFlourUnit * breadCount,
@@ -31,7 +43,7 @@ class Ingredients extends Component {
 
         return (
             <div className={`ingredients ${this.state.visibility}`}>
-                <ul>
+                <ul className={ulStyle}>
                     <li><strong>{ingredients.breadFlour}g</strong> bread flour</li>
                     <li><strong>{ingredients.allPurposeFlour}g</strong> all purpose flour</li>
                     <li><strong>{ingredients.wholeWheat}g</strong> Whole wheat flour</li>

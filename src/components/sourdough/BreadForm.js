@@ -10,6 +10,16 @@ const className = css`
   width: 40px;
 `;
 
+const loafChooserStyle = css`
+    line-height: 1.5rem;
+`;
+
+const headerH2Style = css`
+    color: #a2a2a2;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+`;
+
 class BreadForm extends Component {
     constructor(props) {
         super(props);
@@ -32,8 +42,8 @@ class BreadForm extends Component {
     render() {
         const loafesOfBread = this.state.breadCount > 1 ? 'loafes' : 'loaf';
         return (
-            <div className="loaf-chooser">
-                <h2>Ingredients</h2>
+            <div className={loafChooserStyle}>
+                <h2 className={headerH2Style}>Ingredients</h2>
                 For <input type="number" value={this.state.breadCount} className={className} onChange={this.handleBreadCountInput}/> {loafesOfBread} of bread you will need
             </div>
         );
