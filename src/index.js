@@ -22,7 +22,7 @@ const templateStyle = css`
 
 
 ReactDOM.render(
-    <Router>
+    <Router basename="/easy-sourdough/">
         <div className={templateStyle}>
             <Nav/>
             <Route exact path="/" component={Home} />

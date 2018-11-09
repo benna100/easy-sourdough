@@ -21,11 +21,12 @@ class Ingredients extends Component {
         }
     }
 
+    
     getIngredients(breadCount) {
         const breadFlourUnit = 140;
         const allPurposeFlourUnit = 250;
         const wholeWheatUnit = 90;
-        const waterUnit = 340;
+        const waterUnit = 400;
         const starterUnit = 90;
         const saltUnit = 11;
 

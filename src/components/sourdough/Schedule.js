@@ -68,7 +68,7 @@ class Schedule extends Component{
                 time: '17:00'
             }, {
                 title: 'Add starter',
-                description: 'When the starter has close to doubled in size and can pass the float test it is ready for use. Now mix the starter, the salt and the dough. The bulk fermentation stage has officially started.',
+                description: 'When the starter has close to doubled in size and can pass the float test it is ready for use. Now mix the starter, the salt and the dough. The bulk fermentation stage has officially started. Scoop the dough up and slap it back into the bowl for 5 min. This develops the gluten strength.',
                 optional: false,
                 time: '17:30'
             }, {
