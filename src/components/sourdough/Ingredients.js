@@ -28,7 +28,7 @@ class Ingredients extends Component {
         const wholeWheatUnit = 90;
         const waterUnit = 400;
         const starterUnit = 90;
-        const saltUnit = 11;
+        const saltUnit = 12;
 
         return {
             breadFlour: breadFlourUnit * breadCount,

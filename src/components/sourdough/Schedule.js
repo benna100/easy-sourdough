@@ -63,12 +63,12 @@ class Schedule extends Component{
                 time: '8:00'
             }, {
                 title: 'Mix water and flour',
-                description: 'Add in the flour and water. This process is called autolyse. It develops the gluten in the bread. ',
+                description: 'Add in the flour and water. Mix it in a mixer or with hand for about 15 min. The dough just needs to be well incorporated. This process is called autolyse. It develops the gluten in the bread. ',
                 optional: false,
                 time: '17:00'
             }, {
                 title: 'Add starter',
-                description: 'When the starter has close to doubled in size and can pass the float test it is ready for use. Now mix the starter, the salt and the dough. The bulk fermentation stage has officially started. Scoop the dough up and slap it back into the bowl for 5 min. This develops the gluten strength.',
+                description: 'When the starter has close to doubled in size and can pass the float test it is ready for use. Now mix the starter, the salt and the dough. Mix it with a mixer for 20-25 minutes. It need to be able to pass the gluten window pane test: https://www.youtube.com/watch?v=HvTM7ZyILas. The dough should be shiny and let go of the bowl. VERY IMPORTANT! The bulk fermentation stage has officially started. Scoop the dough up and slap it back into the bowl for 5 min (if no mixer). This develops the gluten strength.',
                 optional: false,
                 time: '17:30'
             }, {
@@ -93,17 +93,22 @@ class Schedule extends Component{
                 time: '18:30'
             }, {
                 title: 'Round the dough',
-                description: 'At this point the dough should be between 1.5 - 2 times the original size. The dough now needs to be shaped into a ball, very gently!',
+                description: 'At this point the dough should be between 1.5 - 2 times the original size. The dough now needs to be shaped into a ball, very gently! Should bench rest for 30 min.',
                 optional: true,
                 time: '22:00'
             }, {
                 title: 'Shape the dough',
-                description: 'Flip the dough over on some light flour and fold it in on itself. Flour container and put inside seam side up into a container. Now the bulk fermentation has ended. Put into fridge and let sit the night over.',
+                description: 'Flip the dough over on some light flour and fold it in on itself. Shape the final bread. If the dough has more than two breads this is now you cut it out to individual breads and shape them. Flour container and put inside seam side up into a container. Now the bulk fermentation has ended. ',
+                optional: false,
+                time: '22:30'
+            }, {
+                title: 'Prepare for fridge',
+                description: 'Basiscally the dough now needs to proof until its done. The longer you wait now the deeper nuances/more sour the bread will become. Because my fridge is so cold it does not proof the dough i need to have the dough perfectly for the oven when i put it into the fridge. Use the bread proofing finger test to decide: https://www.youtube.com/watch?v=vFakPswlQrY. I have had good experience with bread around this proofing: https://photos.app.goo.gl/MGXn9wPCb3ozwHmu6 Even though this maybe a bit to overproofed. ',
                 optional: false,
                 time: '22:30'
             }, {
                 title: 'Warm the oven',
-                description: 'Warm the oven up with a pot inside and take the dough out of the fridge.',
+                description: 'Warm the oven up with a pot inside. DONT take the dough out right before baking it. ',
                 optional: false,
                 time: '08:00'
             }, {
