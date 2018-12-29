@@ -24,6 +24,7 @@ const scheduleStyle = css`
         li {
             margin-bottom: 36px;
             position: relative;
+            word-break: break-word;
 
             h3 {
                 margin-bottom: 8px;
