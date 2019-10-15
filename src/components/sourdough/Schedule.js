@@ -134,7 +134,7 @@ class Schedule extends Component {
             {
                 title: "Flip the dough into the pot",
                 description:
-                    "Flip it in and score it with a razorblade or a sharp knife. Put into oven on max with lid over pot for 20 min.",
+                    "Flip it in and score it with a razorblade or a sharp knife. Put into oven on max with lid over pot for 20 min. Here is some scoring inspiration: https://i.pinimg.com/originals/3c/74/41/3c74414f831937150950c01116d7b130.jpg",
                 optional: false,
                 time: "08:30"
             },
